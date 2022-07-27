@@ -1,0 +1,15 @@
+
+<template>
+        <ul class="slds-m-around_medium">
+            <template for:each={orgs} for:item="org">
+                <lightning-card key={org.Id} title={org.Id} icon-name="custom:custom15" style="font-family: Georgia;">
+                    <li style="margin-bottom: 5px;font-style: oblique; font-size: 20px;">
+                        {org.Name}
+                    </li>
+                    <li>
+                       {org.Domain__c}
+                    </li>
+                </lightning-card>
+            </template>
+        </ul>
+</template>
