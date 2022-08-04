@@ -1,14 +1,23 @@
 
 <template>
         <ul class="slds-m-around_medium">
-            <template for:each={orgs} for:item="org">
+            <template for:each={orgs} for:item="org" >
                 <lightning-card key={org.Id} title={org.Id} icon-name="custom:custom15" style="font-family: Georgia;">
-                    <li style="margin-bottom: 5px;font-style: oblique; font-size: 20px;">
+                    <!-- <li style="margin-bottom: 5px;font-style: oblique; font-size: 20px;">
                         {org.Name}
+                    </li>
+
+                    <li if:true={org.hasUser} style="font-style: oblique; font-size: 20px; color: red"> 
+                        {org.firstUserName}
+                    </li>
+                    <li if:false={org.hasUser} style="font-style: oblique; font-size: 20px; color: red">
+                        No User
                     </li>
                     <li>
                        {org.Domain__c}
-                    </li>
+                    </li> -->
+                    <c-demo-child org-from-parent={org}></c-demo-child>
+
                 </lightning-card>
             </template>
         </ul>

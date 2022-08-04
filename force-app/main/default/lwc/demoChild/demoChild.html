@@ -1,0 +1,18 @@
+<template>
+        <div style="font-style: oblique; font-size: 20px; color: black"> 
+            {org.Name}
+        </div>
+
+        <div if:true={org.hasUser} style="font-family: arial; font-size: 15px; color: black"> 
+            {org.firstUserName}
+        </div>
+        <div if:false={org.hasUser} style="font-style: oblique; font-size: 15px; color: red"> 
+            No user
+        </div>
+
+        <div style="font-family: arial; font-size: 10px; color: black"> 
+            {org.Domain__c}
+        </div>
+
+
+</template>
